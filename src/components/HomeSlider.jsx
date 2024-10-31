@@ -1,23 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import banner from '../assets/images/Banner.WEBP'; // Image for the first slide
-import banner1 from '../assets/images/Banner1.WEBP'; // Image for the second slide
-
+const placeholderImage = 'https://via.placeholder.com/150'; // URL of the placeholder image
+const bannerImage = placeholderImage; 
 const HomeSlider = () => {
   const slides = [
     {
-      backgroundImage: banner,
+      backgroundImage: bannerImage,
       title: 'Elevate Your Evoting and Ticketing Experience With Xtocast',
       subtitle: 'Secure, Confidential, and Accessible from Anywhere.',
       button1: { text: 'Cast Vote', link: 'evoting.html' },
       button2: { text: 'Get Voting App', link: 'apps/voting-app.html' },
-    },
-    {
-      backgroundImage: banner1,
-      title: 'Discover, Buy, Host, and Sell Event Tickets',
-      subtitle: '🤩 BIG or small, Online or Offline. We’ll ticket it!',
-      button1: { text: 'Buy Ticket', link: 'events.html' },
-      button2: { text: 'Get Ticketing App', link: 'apps/ticketing-app.html' },
-    },
+    }
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
